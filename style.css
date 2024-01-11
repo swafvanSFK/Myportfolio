@@ -1,0 +1,653 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400&family=Roboto:wght@300;400;500;900&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #f0b000;
+  --font-color: #dfe0e5;
+  --background-color: #003754;
+  --font-family: "Poppins", "sans-serif";
+  --title-margin-top: 100px;
+}
+
+/* CSS Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background-color);
+  scroll-behavior: smooth;
+}
+
+/* Global CSS */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 100px;
+  color: var(--font-color);
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.section-desc {
+  color: var(--font-color);
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 100px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*Set Background For Body */
+
+body {
+  background-color: var(--background-color);
+  background: url(./Assets/images/bg-image.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+/* ScrollBar Style */
+
+body::-webkit-scrollbar {
+  background-color: var(--font-color);
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* ............................................NAVBAR SECTION............................................*/
+
+.main-logo {
+  width: 80px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.nav-item a {
+  text-transform: uppercase;
+  margin: 0 15px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--font-color);
+  position: relative;
+  display: block;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+/* Navlinks Hover Effect */
+        
+.nav-item a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--font-color);
+  border-bottom: 1px solid var(--font-color);
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.nav-item a:hover {
+  color: #fff;
+}
+
+.nav-item a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.nav-item a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--primary-color) !important;
+}
+
+.navbar .contact-btn .btn {
+  width: 150px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--font-color);
+  padding: 10px 25px;
+  transition: all 0.3s ease-in;
+}
+
+.navbar .contact-btn .btn:hover {
+  background: var(--primary-color);
+  border: transparent;
+}
+
+/* Responsive Styles for Small Screens */
+
+@media screen and (max-width: 992px) {
+  .contact-btn {
+    display: none;
+  }
+}
+
+/* ................................................HERO SECTION........................................*/
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+.hero-section h4 {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 7.8px;
+}
+
+.hero-section h1 {
+  color: #ffffff;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: 6.3px;
+  line-height: 118px;
+  margin: 0;
+}
+
+.hero-section span {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 5.2px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.hero-section .social-icons {
+  margin-top: 50px;
+  padding-left: 0;
+}
+
+.social-icons i {
+  margin: 0 8px;
+}
+
+/* Ipad Media */
+
+.hero-section .social-icons i {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #001c2b6d;
+  border-radius: 50%;
+  font-size: 25px;
+  color: var(--font-color);
+  transition: 0.5s;
+}
+
+/* Hover effect for Social Icons */
+
+.hero-section .social-icons i:hover::before {
+  transform: scale(1.1);
+}
+
+.hero-section .social-icons i:hover {
+  color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Responsive Styles for Mobile screen */
+
+@media screen and (max-width: 418px) {
+  .hero-section h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+}
+
+/* Responsive Styles for Ipad screen */
+
+@media screen and (max-width: 768px) {
+  .welcome-text h4 {
+    font-size: 25px;
+  }
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section .social-icons {
+    justify-content: center;
+  }
+  .hero-section h1 {
+    font-size: 70px;
+    line-height: 100px;
+  }
+}
+
+/* ............................................ABOUT............................................*/
+
+.about-section {
+  color: var(--font-color);
+}
+
+.about-section .section-title {
+  margin-top: 2px;
+  margin-bottom: 100px;
+}
+
+.about-section .section-text {
+  color: var(--font-color);
+  margin: 20px 0 100px 0;
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.about-txt-area {
+  border-left: 1px solid var(--primary-color);
+  position: relative;
+}
+
+.about-section .about-name {
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+}
+
+.about-section .about-name::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: block;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -10px;
+  left: -22px;
+}
+
+.about-section .about-name::after {
+  content: "DEVELOPER";
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  bottom: -10px;
+  right: 240px;
+  letter-spacing: 10px;
+}
+
+.about-section ul {
+  margin-top: 30px;
+}
+
+.about-section ul li {
+  list-style: none;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 8px;
+  font-weight: lighter;
+}
+
+.about-section p {
+  max-width: 600px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Responsive Styles for Small Screen */
+
+@media screen and (max-width: 992px) {
+  .about-section {
+    text-align: center;
+  }
+  .section-text {
+    margin-top: 300px;
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  .about-txt-area {
+    border-left: none;
+  }
+  .about-section .about-txt-area {
+    width: 100%;
+  }
+  .about-section .about-name {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .about-section .about-name::before {
+    display: none;
+  }
+  .about-section .about-name::after {
+    display: none;
+  }
+  .about-section ul {
+    padding: 0;
+  }
+  .about-section ul li {
+    margin: 0;
+    font-size: 15px;
+  }
+  .about-section p {
+    max-width: 100%;
+    margin: 0 0 30px 0;
+  }
+}
+
+/* ............................................FACT............................................*/
+.fact-section {
+  color: var(--font-color);
+}
+
+.fact-icons img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.fact-icons h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.fact-icons p {
+  text-transform: uppercase;
+  transition: linear 2s ease;
+}
+/* ............................................SKILL............................................*/
+
+.skills-section.section-title {
+  margin-bottom: 100px;
+}
+
+.skills-section .html {
+  margin-top: 50px;
+}
+
+.progress {
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #000000;
+  height: 100%;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: var(--primary-color) !important;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* ............................................RESUME............................................*/
+
+.resume-section {
+  text-transform: lowercase;
+  color: var(--font-color);
+}
+
+.resume-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.resume-desc {
+  margin-left: 30px;
+  padding: 0 0 0px 20px;
+  border-left: 1px solid var(--primary-color);
+  position: relative;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+
+.resume-desc::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: block;
+  margin-bottom: 20px;
+  position: absolute;
+  left: -5px;
+}
+
+.resume-desc h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.resume-desc .working-year {
+  display: inline;
+  background: var(--primary-color);
+  padding: 2px 5px;
+  margin-bottom: 500px;
+  font-style: italic;
+}
+
+.worked-place {
+  font-style: italic;
+}
+
+.progress-items {
+  height: 10px;
+}
+
+/* Responsive styles for small screen */
+@media screen and (max-width: 992px) {
+  .resume-section h2 {
+    font-size: 26px;
+  }
+}
+
+/* ............................................PORTFOLIO............................................*/
+
+.portfolio-categories {
+  margin-bottom: 30px;
+}
+
+.portfolio-categories li {
+  list-style: none;
+  padding: 0px 30px;
+  margin: 0;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.portfolio-img img {
+  position: relative;
+  width: 100%;
+  margin: 5px;
+  padding: 0 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.portfolio-img img:hover {
+  opacity: 0.3;
+}
+
+/* ............................................SERVICE............................................*/
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: var(--font-color) !important;
+  background-color: #063148 !important;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 1px 1px 20px transparent;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 20px #00000079;
+}
+
+.card .vector {
+  width: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card .service-img {
+  width: 50px;
+  position: absolute;
+  top: 18%;
+  transition: 0.5s ease ;
+}
+
+.card:hover .service-img {
+  transform: rotate(360deg);
+}
+
+.service .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ............................................QUATES............................................*/
+
+
+
+/* ............................................CONTACT............................................*/
+
+.social-icons p,span{
+  color: var(--font-color);
+}
+
+.contact .social-icons i{
+  color: var(--primary-color);
+  font-size: 35px;
+  background-color: #063148;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.send-mail .input-box{
+  background-color: #063148;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.submit-btn button{
+  width: 150px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--font-color);
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.submit-btn button:hover{
+  background: var(--primary-color);
+  border:1px solid transparent;
+}
+
+/* ............................................FOOTER............................................*/
+
+.footer{
+  background-color: #063148;
+  padding-bottom: 20px;
+}
+
+.footer h1{
+  color: var(--font-color);
+}
+.footer p{
+  color: var(--font-color);
+  font-size: 15px;
+  text-transform: capitalize;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.footer i{
+  color: var(--primary-color);
+  font-size: 25px;
+  margin: 0 10px;
+  background-color: var(--background-color);
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.footer span{
+  font-style: italic;
+}
