@@ -62,9 +62,15 @@ body {
   color: var(--font-color);
 }
 
+@media screen and (max-width:576px) {
+  body {
+    background: var(--background-color) !important;
+  }
+}
+
 /* ScrollBar Style */
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar { 
   background-color: var(--font-color);
   width: 10px;
 }
@@ -239,10 +245,10 @@ body::-webkit-scrollbar-thumb {
 
 /* Responsive Styles for Mobile screen */
 
-@media screen and (max-width: 418px) {
+@media screen and (max-width: 476px) {
   .hero-section h1 {
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 10px;
   }
 }
 
