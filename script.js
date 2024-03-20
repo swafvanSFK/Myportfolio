@@ -7,7 +7,7 @@ function submitHandler(){
     alert.style.display = 'none';
 
     if (name.length == 0){
-        alert.textContent = "ENTER YOU NAME . IT'S MANDATORY!"
+        alert.textContent = "ENTER YOUR NAME . IT'S MANDATORY!"
         alert.style.display = 'block';
         return false;
     }
@@ -21,7 +21,6 @@ function submitHandler(){
         alert.style.display = 'block';
         return false;
     }
-
 
     return false;
 }
