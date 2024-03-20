@@ -610,7 +610,10 @@
             </div>
           </div>
           <div class="col-lg-8 mt-lg-5 send-mail">
-            <form>
+            <form onsubmit="return submitHandler()">
+              <div style="display: none;" id="alert" class="alert-danger  alert">
+                
+              </div>
               <div class="d-flex mb-3">
                 <input
                   class="w-100 input-box me-2"
@@ -618,6 +621,7 @@
                   name="name"
                   id="name"
                   placeholder="YOUR NAME"
+                  
                 />
                 <input
                   class="w-100 input-box"
@@ -625,6 +629,7 @@
                   name="email"
                   id="email"
                   placeholder="YOUR EMAIL"
+                  
                 />
               </div>
               <input
@@ -634,7 +639,7 @@
                 id="subject"
                 placeholder="SUBJECT"
               />
-              <textarea class="w-100 input-box" placeholder="MESSAGE" name="message" id="message cols="20" rows="10"></textarea>
+              <textarea class="w-100 input-box" placeholder="MESSAGE" name="message" id="message" cols="20" rows="10" ></textarea>
               <div class="submit-btn d-flex justify-content-center mt-5">
                 <button  type="submit">MESSAGE</button>
               </div>
