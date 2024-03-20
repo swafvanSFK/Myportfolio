@@ -603,6 +603,10 @@ a:-webkit-any-link {
   border-radius: 50%;
 }
 
+form p{
+  display: none;
+}
+
 .send-mail .input-box{
   background-color: #063148;
   border: none;
